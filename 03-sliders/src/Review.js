@@ -61,7 +61,7 @@ const Review = () => {
                 </button>
             </div>
 
-            <button className='ranodm-num' onClick={randomNumber}>
+            <button className='random-btn' onClick={randomNumber}>
                 Surprise Me
             </button>
         </article>
