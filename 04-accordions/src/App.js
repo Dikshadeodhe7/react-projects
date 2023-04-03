@@ -7,6 +7,11 @@ import Question from './Question';
 function App() {
 
   const [questions, setQuestions] = useState(data);
+  const[idFlag, setIdFlag] = useState(null);
+
+  const toggleAnswer = (id) => {
+    setIdFlag(id);
+  }
 
   return (
     <main>
@@ -16,7 +21,7 @@ function App() {
             {
               questions.map((question) => {
                   return (
-                    <Question key={question.id} {...question}/>
+                    <Question key={question.id} {...question} toggleAnswer={toggleAnswer} idFlag={idFlag}/>
                   )
               })
             }
